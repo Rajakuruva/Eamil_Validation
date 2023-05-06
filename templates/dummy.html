@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <style>
+        body
+        {
+            background:linear-gradient(45deg,rgb(30, 159, 210),white,rgb(14, 120, 162));
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <nav class="nav bg-secondary border border-danger border border-3">
+            <a href="{% url 'admin:index' %}" class="na-link mt-3 mb-3 ms-4 shadow-lg px-4 btn bg-info">Admin_page</a>
+            <a href="{% url 'Registration' %}" class="na-link mt-3 mb-3 ms-4 shadow-lg px-4 btn bg-info">Registration_page</a>
+            <a href="{% url 'Home' %}" class="na-link mt-3 mb-3 ms-4 shadow-lg px-4 btn bg-info">Home_page</a>
+        </nav>
+        {% block body_block %}
+
+        {% endblock %}
+    </center>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+</html>
