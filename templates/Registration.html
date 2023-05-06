@@ -1,5 +1,5 @@
 {% extends 'dummy.html' %}
-
+{% load static %}
 {% block title %}
 <title>Registration</title>
 <style>
@@ -9,6 +9,10 @@
         width: 300px;
         border-radius: 10px;
         color: rgb(238, 234, 17);
+    }
+    body
+    {
+        background-image: url('{% static "images/Register.jpg" %}');
     }
 </style>
 {% endblock %}

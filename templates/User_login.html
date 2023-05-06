@@ -1,0 +1,26 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>User_login</title>
+<style>
+    body
+    {
+        height: 600px;
+        background:linear-gradient(45deg,rgb(30, 159, 210),white,rgb(14, 120, 162));
+        color: brown;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<form method="POST">
+    {% csrf_token %}
+    <label for="username" class="mt-3">username</label>
+    <input type="text" name="username" id="username">
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password">
+    <br><br>
+    <input type="submit" value="User_login" >
+</form>
+{% endblock %}

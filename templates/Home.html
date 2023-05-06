@@ -1,12 +1,17 @@
 {% extends 'dummy.html' %}
-
+{% load static %}
 {% block title %}
 <title>Home</title>
 <style>
+    body
+    {
+        height: 600px;
+        background:linear-gradient(45deg,rgb(30, 159, 210),white,rgb(14, 120, 162));
+        color: brown;
+    }
     h1
     {
-        width: 550px;
-        background-color: blue;
+        background-color: rgb(4, 4, 41);
         color: white;
         border-radius: 10px;
     }
@@ -14,5 +19,9 @@
 {% endblock %}
 
 {% block body_block %}
-<h1 class="h1 mt-3">WELCOME TO HOMEPAGE</h1>
+    {% if username %}
+    <h1 class="h1 mt-3">WELCOME TO HOMEPAGE MR/MRs {{username}}</h1>
+    {% else %}
+    <h1 class="h1 mt-3">WELCOME TO HOMEPAGE</h1>
+    {% endif %}
 {% endblock %}
